@@ -19,7 +19,7 @@
     font-size: 16px;
     color: white;
     font-family: Helvetica, Roboto, Arial, "sans-serif";
-    margin: 30px;
+    margin: 10px;
     user-select: none;
     cursor: pointer;
     text-decoration: none;
@@ -34,6 +34,10 @@
     width: 100%;
     height: 100%;
 }
+#android {
+    display: none;
+    margin-bottom: 40px;
+}
 </style>
 
 <body>
@@ -41,6 +45,10 @@
     <iframe id="cal" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSao_Paulo&amp;src=ZW4uYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=cTl1NWhjNXY4c2FwdjVhZWZ0MW11NmxxMTNiY3ZvcGlAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%230B8043&amp;color=%23795548&amp;hl=pt_BR&amp;showTitle=0&amp;showPrint=0" style="border:solid 1px #777" frameborder="0" scrolling="no"></iframe>
 </div>
 <br>
-<a class="button" href="https://calendar.google.com/calendar/ical/q9u5hc5v8sapv5aeft1mu6lq13bcvopi%40import.calendar.google.com/public/basic.ics">Assinar calendário no Android</a> <a class="button" href="webcal://p30-caldav.icloud.com/published/2/AAAAAAAAAAAAAAAAAAAAAEkdBkAFflMAyCJwdrKe7dV7wqaw2XMbE9gblsAghHjq">Assinar calendário no iOS</a>
+<a class="button" onclick="show()" href="#anchor">Assinar calendário no Android</a> <a class="button" href="webcal://p30-caldav.icloud.com/published/2/AAAAAAAAAAAAAAAAAAAAAEkdBkAFflMAyCJwdrKe7dV7wqaw2XMbE9gblsAghHjq">Assinar calendário no iOS</a>
+<div id="android"><a name="anchor"/> <a>Para assinar o calendário no Android, <a href="https://support.google.com/calendar/answer/37100?co=GENIE.Platform%3DAndroid&hl=pt-BR">é necessário seguir estas instruções.</a> Utilize a seguinte URL para adicionar o calendário:</a>
+<input id="input" type="text" style="width: 300px; height: 40px; overflow: auto; display: block;" value="webcal://p30-caldav.icloud.com/published/2/NjI4MTgyOTU0NjI4MTgyOQs7wuYo31AJp0KWK6PRGMBp3Lr8PHGOuucJ4JGHcBba">
+</div>
+<script>document.getElementById("input").onclick = function() {this.select();document.execCommand('copy');}function show() { document.getElementById("android").style = "display: block;";}</script>
 </body>
 </html>
