@@ -46,9 +46,12 @@
 </div>
 <br>
 <a class="button" onclick="show()" href="#android">Assinar calendário no Android</a> <a class="button" href="webcal://p30-caldav.icloud.com/published/2/AAAAAAAAAAAAAAAAAAAAAEkdBkAFflMAyCJwdrKe7dV7wqaw2XMbE9gblsAghHjq">Assinar calendário no iOS</a>
-<div id="android"><a name="android"/> <a>Para assinar o calendário no Android, <a href="https://support.google.com/calendar/answer/37100?co=GENIE.Platform%3DAndroid&hl=pt-BR">é necessário seguir estas instruções.</a> Utilize a seguinte URL para adicionar o calendário:</a>
-<input id="input" type="text" style="width: 300px; height: 40px; overflow: auto; display: block; margin-top: 10px;" value="webcal://p30-caldav.icloud.com/published/2/NjI4MTgyOTU0NjI4MTgyOQs7wuYo31AJp0KWK6PRGMBp3Lr8PHGOuucJ4JGHcBba">
-</div>
+<div id="android"><a name="android"/> <a>Para assinar o calendário no Android, <a href="https://calendar.google.com/calendar/u/0/r/settings/addbyurl">acesse esta página</a> (confira se o você está na conta correta) e utilize a seguinte URL para adicionar o calendário:</a>
+    <input id="input" type="text" style="width: 300px; height: 40px; overflow: auto; display: block; margin-top: 10px;" value="webcal://p30-caldav.icloud.com/published/2/NjI4MTgyOTU0NjI4MTgyOQs7wuYo31AJp0KWK6PRGMBp3Lr8PHGOuucJ4JGHcBba">
+    <br>
+    <a>Confira se o calendário foi adicionado ao aplicativo Agenda.</a>
+    <br>
+    <a href="https://support.google.com/calendar/answer/37100?co=GENIE.Platform%3DDesktop&hl=pt-BR&oco=1#zippy=%2Cadicionar-usando-um-link">Caso você enfrente dificuldades, clique aqui para conferir as instruções passo a passo</a> </div>
 <script>document.getElementById("input").onclick = function() {this.select();document.execCommand('copy');};function show() { document.getElementById("android").style = "display: block;";}</script>
 </body>
 </html>
