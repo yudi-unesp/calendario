@@ -12,13 +12,15 @@
 </head>
 
 <style>
+body * {
+    font-family: Helvetica, Roboto, Arial, "sans-serif";
+}
 .button {
     display: inline-block;
     background-image: linear-gradient(to bottom right, #56C1FF, #0076BA);
     padding: 10px 20px 10px 20px;
     font-size: 16px;
     color: white;
-    font-family: Helvetica, Roboto, Arial, "sans-serif";
     margin: 10px;
     user-select: none;
     cursor: pointer;
@@ -42,16 +44,15 @@
 
 <body>
 <div class="cal-container">
-    <iframe id="cal" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSao_Paulo&amp;src=ZW4uYnJhemlsaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=cTl1NWhjNXY4c2FwdjVhZWZ0MW11NmxxMTNiY3ZvcGlAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%230B8043&amp;color=%23795548&amp;hl=pt_BR&amp;showTitle=0&amp;showPrint=0" style="border:solid 1px #777" frameborder="0" scrolling="no"></iframe>
+    <iframe id="cal" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSao_Paulo&amp;src=Y19mbms0a3A0NmdoNGw1OW5zcGdtY2k3cTJuNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=cnQxaGpmNm5sdW8zNGdxY250ZDVwY2w0ZDNtaHVzNmpAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%230e61b9&amp;color=%23D50000&amp;hl=pt_BR&amp;showPrint=0&amp;showTitle=0&amp;showCalendars=0&amp;showTz=1&amp;showDate=1" style="border-width:0" frameborder="0" scrolling="no"></iframe>
 </div>
 <br>
 <a class="button" onclick="show()" href="#android">Assinar calendário no Android</a> <a class="button" href="webcal://p30-caldav.icloud.com/published/2/AAAAAAAAAAAAAAAAAAAAAEkdBkAFflMAyCJwdrKe7dV7wqaw2XMbE9gblsAghHjq">Assinar calendário no iOS</a>
-<div id="android"><a name="android"/> <a>Para assinar o calendário no Android, <a href="https://calendar.google.com/calendar/u/0/r/settings/addbyurl">acesse esta página</a> (confira se o você está na conta correta) e utilize a seguinte URL para adicionar o calendário:</a>
-    <input id="input" type="text" style="width: 300px; height: 40px; overflow: auto; display: block; margin-top: 10px;" value="webcal://p30-caldav.icloud.com/published/2/NjI4MTgyOTU0NjI4MTgyOQs7wuYo31AJp0KWK6PRGMBp3Lr8PHGOuucJ4JGHcBba">
+<div id="android"><a name="android"/> <a>Para assinar o calendário no Android, <a href="https://calendar.google.com/calendar/u/0/r/settings/addcalendar">acesse esta página</a> (confira se o você está na conta correta) e utilize o seguinte "e-mail"/ID para adicionar o calendário:</a>
+    <input id="input" type="text" style="width: 300px; height: 40px; overflow: auto; display: block; margin-top: 10px;" value="c_fnk4kp46gh4l59nspgmci7q2n4@group.calendar.google.com">
     <br>
-    <a>Confira se o calendário foi adicionado ao aplicativo Agenda.</a>
-    <br>
-    <a href="https://support.google.com/calendar/answer/37100?co=GENIE.Platform%3DDesktop&hl=pt-BR&oco=1#zippy=%2Cadicionar-usando-um-link">Caso você enfrente dificuldades, clique aqui para conferir as instruções passo a passo</a> </div>
+    <a>Confira se o calendário foi adicionado ao aplicativo Agenda no seu smartphone.</a> <br>
+    <a href="https://support.google.com/calendar/answer/37100?co=GENIE.Platform%3DDesktop&hl=pt-BR&oco=1#zippy=%2Cadicionar-usando-um-endere%C3%A7o-de-e-mail">Caso você enfrente dificuldades, clique aqui para conferir as instruções passo a passo.</a> </div>
 <script>document.getElementById("input").onclick = function() {this.select();document.execCommand('copy');};function show() { document.getElementById("android").style = "display: block;";}</script>
 </body>
 </html>
