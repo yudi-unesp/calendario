@@ -1,59 +1,85 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<title>Calendário da computação</title>
-<meta name="author" content="Renan Yudi">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="assets/icone.png"/>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Calendário da computação">
-<meta property="og:description" content="Calendário com provas e outros eventos relevantes para a turma ingressante em 2020 do curso de ciência de computação da FCT/Unesp.">
-<meta property="og:image" content="https://yudi.github.io/calendario/assets/icone.png">
+    <title>Calendário da computação</title>
+    <meta name="author" content="Renan Yudi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/icone.png" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Calendário da computação">
+    <!-- Substitua a descrição abaixo --> 
+    <meta property="og:description"
+        content="Calendário com provas e outros eventos relevantes para a turma ingressante em 2020 do curso de ciência de computação da FCT/Unesp.">
+    <meta property="og:image" content="https://yudi.github.io/calendario/assets/icone.png">
 </head>
 
 <style>
-body * {
-    font-family: Helvetica, Roboto, Arial, "sans-serif";
-}
-.button {
-    display: inline-block;
-    background-image: linear-gradient(to bottom right, #56C1FF, #0076BA);
-    padding: 10px 20px 10px 20px;
-    font-size: 16px;
-    color: white;
-    margin: 10px;
-    user-select: none;
-    cursor: pointer;
-    text-decoration: none;
-}
-.cal-container {
-    max-width: 800px;
-    min-width: 600px;
-    height: 600px;
-    position: relative;
-    overflow: hidden;
-}
-#cal {
-    width: 100%;
-    height: 100%;
-}
-#android {
-    display: none;
-    margin-bottom: 40px;
-}
+    body * {
+        font-family: "Helvetica Neue", Helvetica, Roboto, Arial, "sans-serif";
+    }
+
+    .button {
+        display: inline-block;
+        background-image: linear-gradient(to bottom right, #56C1FF, #0076BA);
+        padding: 10px 20px 10px 20px;
+        font-size: 16px;
+        color: white;
+        margin: 10px;
+        user-select: none;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .cal-container {
+        max-width: 800px;
+        min-width: 600px;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #cal {
+        width: 100%;
+        height: 100%;
+    }
+
+    #android {
+        display: none;
+        margin-bottom: 40px;
+    }
 </style>
 
 <body>
-<div class="cal-container">
-    <iframe id="cal" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSao_Paulo&amp;src=Y19mbms0a3A0NmdoNGw1OW5zcGdtY2k3cTJuNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=cnQxaGpmNm5sdW8zNGdxY250ZDVwY2w0ZDNtaHVzNmpAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%230e61b9&amp;color=%23D50000&amp;hl=pt_BR&amp;showPrint=0&amp;showTitle=0&amp;showCalendars=0&amp;showTz=1&amp;showDate=1" style="border-width:0" frameborder="0" scrolling="no"></iframe>
-</div>
-<br>
-<a class="button" onclick="show()" href="#android">Assinar calendário no Android</a> <a class="button" href="webcal://calendar.google.com/calendar/ical/c_fnk4kp46gh4l59nspgmci7q2n4%40group.calendar.google.com/private-9db99ca5eacfe0ab3823ad68f1d0e95e/basic.ics">Assinar calendário no iOS</a>
-<div id="android"><a name="android"/> <a>Para assinar o calendário no Android, <a href="https://calendar.google.com/calendar/u/0/r/settings/addcalendar">acesse esta página</a> (confira se você está na conta correta) e utilize o seguinte "e-mail"/ID para adicionar o calendário:</a>
-    <input id="input" type="text" style="width: 300px; height: 40px; overflow: auto; display: block; margin-top: 10px;" value="c_fnk4kp46gh4l59nspgmci7q2n4@group.calendar.google.com">
+    <div class="cal-container">
+        <!-- Substitua a linha abaixo com o seu próprio calendário -->
+        <iframe id="cal" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSao_Paulo&amp;src=Y19mbms0a3A0NmdoNGw1OW5zcGdtY2k3cTJuNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;src=cnQxaGpmNm5sdW8zNGdxY250ZDVwY2w0ZDNtaHVzNmpAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%230e61b9&amp;color=%23D50000&amp;hl=pt_BR&amp;showPrint=0&amp;showTitle=0&amp;showCalendars=0&amp;showTz=1&amp;showDate=1" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+    </div>
     <br>
-    <a>Confira se o calendário foi adicionado ao aplicativo Agenda no seu smartphone.</a> <br>
-    <a href="https://support.google.com/calendar/answer/37100?co=GENIE.Platform%3DDesktop&hl=pt-BR&oco=1#zippy=%2Cadicionar-usando-um-endere%C3%A7o-de-e-mail">Caso você enfrente dificuldades, clique aqui para conferir as instruções passo a passo.</a> </div>
-<script>document.getElementById("input").onclick = function() {this.select();document.execCommand('copy');};function show() { document.getElementById("android").style = "display: block;";}</script>
+    <a class="button" onclick="show()" href="#android">Assinar calendário no Android</a>
+    <!-- Substitua o link abaixo com o link iCal --> 
+    <a class="button" href="webcal://calendar.google.com/calendar/ical/c_fnk4kp46gh4l59nspgmci7q2n4%40group.calendar.google.com/private-9db99ca5eacfe0ab3823ad68f1d0e95e/basic.ics">
+        Assinar calendário no iOS</a>
+    <div id="android"> <div>Para assinar o calendário no Android, <a
+                href="https://calendar.google.com/calendar/u/0/r/settings/addcalendar">acesse esta página</a> (confira
+            se você está na conta correta) e utilize o seguinte "e-mail"/ID para adicionar o calendário:</div>
+         <!-- Substitua o value abaixo com o ID do calendário -->    
+        <input id="input" type="text" style="width: 300px; height: 40px; overflow: auto; display: block; margin-top: 10px;"
+            value="c_fnk4kp46gh4l59nspgmci7q2n4@group.calendar.google.com">
+        <br>
+        <a>Confira se o calendário foi adicionado ao aplicativo Agenda no seu smartphone.</a> <br>
+        <a href="https://support.google.com/calendar/answer/37100?co=GENIE.Platform%3DDesktop&hl=pt-BR&oco=1#zippy=%2Cadicionar-usando-um-endere%C3%A7o-de-e-mail">Caso você enfrente dificuldades, clique aqui para conferir as instruções passo a passo.</a> </div>
+    <script>
+        // Campo do ID Android - Copiar texto ao clicar
+        document.getElementById("input").onclick = function () {
+            this.select();
+            document.execCommand('copy');
+        };
+        // Botão Android - Mostrar instruções
+        function show() {
+            document.getElementById("android").style = "display: block;";
+        }
+    </script>
 </body>
+
 </html>
